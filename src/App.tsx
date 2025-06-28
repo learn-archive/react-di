@@ -1,13 +1,9 @@
 import './App.css';
+import { MyComponent } from './components/MyComponent';
+import { MyService } from './services/MyService';
 
-function App() {
-  return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </>
-  );
-}
+const service = new MyService();
 
-export default App;
+export const App = () => {
+  return <MyComponent myService={service} />;
+};
